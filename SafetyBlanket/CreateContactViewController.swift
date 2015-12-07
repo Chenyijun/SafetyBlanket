@@ -7,29 +7,72 @@
 //
 
 import UIKit
+import Contacts
+import Parse
 
-class CreateContactViewController: UIViewController {
-
+@available(iOS 9.0, *)
+class CreateContactViewController: UIViewController, UITextFieldDelegate {
+    
+    @IBOutlet weak var txtFirstname: UITextField!
+    
+    @IBOutlet weak var txtLastname: UITextField!
+    
+    @IBOutlet weak var txtPhone: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        txtFirstname.delegate = self
+        txtLastname.delegate = self
+        txtPhone.delegate = self
+        
+        let saveBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Save, target: self, action: "createContact")
+        navigationItem.rightBarButtonItem = saveBarButtonItem
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    // MARK: Custom functions
+    
+    func createContact() {
+        let newContact = CNMutableContact()
+        
+        newContact.givenName = txtFirstname.text!
+        newContact.familyName = txtLastname.text!
+        
+        let phoneNumber = CNLabeledValue(label: CNLabelHome, value: CNPhoneNumber(stringValue:txtPhone.text!))
+        newContact.phoneNumbers = [phoneNumber]
+        
+        let contact = PFObject(className: "Contact")
+        contact.setObject(txtFirstname.text!, forKey:"firstName")
+        contact.setObject(txtLastname.text!, forKey:"lastName")
+        contact.setObject(txtPhone.text!, forKey:"phoneNumber")
+        contact.setObject(PFUser.currentUser()!, forKey: "userId")
+        contact.saveInBackground()
+        
+        do {
+            let saveRequest = CNSaveRequest()
+            saveRequest.addContact(newContact, toContainerWithIdentifier: nil)
+            try AppDelegate.getAppDelegate().contactStore.executeSaveRequest(saveRequest)
+            
+            navigationController?.popViewControllerAnimated(true)
+        }
+        catch {
+            AppDelegate.getAppDelegate().showMessage("Unable to save the new contact.")
+        }
     }
-    */
-
+    
+    
+    // MARK: UITextFieldDelegate functions
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
 }
