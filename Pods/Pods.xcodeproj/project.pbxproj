@@ -1,0 +1,502 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03471E4AD421B43AB32069270B8E6794 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		034961F0D3F2DF1FDFF450BEE11AB32C /* CircleProgressView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BF9A472A4A182941F7C22990CA2CD0 /* CircleProgressView-dummy.m */; };
+		335E50CC8551C6777641183195E446B5 /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC21132B68808A8E4AECD18803FE798 /* CircleProgressView.swift */; };
+		3CB1535EB6286B1B587AC9BA17D25E4E /* CircleProgressView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CED6A0A875DBD11242D3044ACB76212 /* CircleProgressView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E05A58362D3041C8F8227E4EF869D92 /* Pods-SafetyBlanket-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BE1BCE30D7E20E0E86D35F776C394690 /* Pods-SafetyBlanket-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2111221EE513D5B2D8D0F9AA4E680A0 /* Pods-SafetyBlanket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC68AF2D4CEDD76F4A6072E133308734 /* Pods-SafetyBlanket-dummy.m */; };
+		F583B0A72CB709C10D2E7ECC71ECEB05 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		74C2E30DF02D0CBC0D2C1ED52A5913D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6AAAF367F62F10D68011597AC6A0B113;
+			remoteInfo = CircleProgressView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		08D3C858106EC9CF1C3047DC71E9634E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		133ED1A1FF9D00788B08DAD307EC9225 /* Pods-SafetyBlanket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SafetyBlanket.release.xcconfig"; sourceTree = "<group>"; };
+		3BFA28AE69F57773ED243107D334C863 /* CircleProgressView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CircleProgressView.modulemap; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		43A3EE63357BB6F8BDF5BEFBAABB9649 /* Pods-SafetyBlanket-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SafetyBlanket-resources.sh"; sourceTree = "<group>"; };
+		4DC21132B68808A8E4AECD18803FE798 /* CircleProgressView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircleProgressView.swift; path = ProgressView/CircleProgressView.swift; sourceTree = "<group>"; };
+		55F3F3C62F10BBB1B2D963CFC91CF5F5 /* Pods-SafetyBlanket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SafetyBlanket.debug.xcconfig"; sourceTree = "<group>"; };
+		62355A09EB98DB1EB6BACD5A6F23976E /* Pods-SafetyBlanket-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SafetyBlanket-acknowledgements.plist"; sourceTree = "<group>"; };
+		66A0782C199686D62343A93969F6C560 /* CircleProgressView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CircleProgressView-prefix.pch"; sourceTree = "<group>"; };
+		6A446D3462E5972A4F314AF2F6EB56D2 /* Pods-SafetyBlanket-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SafetyBlanket-acknowledgements.markdown"; sourceTree = "<group>"; };
+		88BAD4AC58705E6C45935BE941E28917 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CED6A0A875DBD11242D3044ACB76212 /* CircleProgressView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CircleProgressView-umbrella.h"; sourceTree = "<group>"; };
+		9D0FF49B3EBC3F7243596C9BEB93BA60 /* Pods-SafetyBlanket.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SafetyBlanket.modulemap"; sourceTree = "<group>"; };
+		A167D7BF7BD02D491644863303D346D0 /* CircleProgressView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CircleProgressView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8EA1F5FF45FC82BD9093D37BCD027FE /* Pods_SafetyBlanket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SafetyBlanket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9BF9A472A4A182941F7C22990CA2CD0 /* CircleProgressView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CircleProgressView-dummy.m"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BE1BCE30D7E20E0E86D35F776C394690 /* Pods-SafetyBlanket-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SafetyBlanket-umbrella.h"; sourceTree = "<group>"; };
+		BF0DF2A4E0BEF8B42772BA4BFED0C646 /* CircleProgressView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CircleProgressView.xcconfig; sourceTree = "<group>"; };
+		CC68AF2D4CEDD76F4A6072E133308734 /* Pods-SafetyBlanket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SafetyBlanket-dummy.m"; sourceTree = "<group>"; };
+		DC9272A178B12F1EE07B8FE931EA01FD /* Pods-SafetyBlanket-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SafetyBlanket-frameworks.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29F20DE40F5419B9D4505A5B858930AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03471E4AD421B43AB32069270B8E6794 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98736C988CD8418C25C978F9E50F0208 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F583B0A72CB709C10D2E7ECC71ECEB05 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2AC53A4FD6E75F007C8D0ABC1F6172F8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6FB0F57CDDA0FA8535D78C01305CC4C1 /* CircleProgressView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		331519233533EDBA668AA8A85828A02C /* Pods-SafetyBlanket */ = {
+			isa = PBXGroup;
+			children = (
+				88BAD4AC58705E6C45935BE941E28917 /* Info.plist */,
+				9D0FF49B3EBC3F7243596C9BEB93BA60 /* Pods-SafetyBlanket.modulemap */,
+				6A446D3462E5972A4F314AF2F6EB56D2 /* Pods-SafetyBlanket-acknowledgements.markdown */,
+				62355A09EB98DB1EB6BACD5A6F23976E /* Pods-SafetyBlanket-acknowledgements.plist */,
+				CC68AF2D4CEDD76F4A6072E133308734 /* Pods-SafetyBlanket-dummy.m */,
+				DC9272A178B12F1EE07B8FE931EA01FD /* Pods-SafetyBlanket-frameworks.sh */,
+				43A3EE63357BB6F8BDF5BEFBAABB9649 /* Pods-SafetyBlanket-resources.sh */,
+				BE1BCE30D7E20E0E86D35F776C394690 /* Pods-SafetyBlanket-umbrella.h */,
+				55F3F3C62F10BBB1B2D963CFC91CF5F5 /* Pods-SafetyBlanket.debug.xcconfig */,
+				133ED1A1FF9D00788B08DAD307EC9225 /* Pods-SafetyBlanket.release.xcconfig */,
+			);
+			name = "Pods-SafetyBlanket";
+			path = "Target Support Files/Pods-SafetyBlanket";
+			sourceTree = "<group>";
+		};
+		536E8E0A2A57963F9C08A83DF0FABA68 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3BFA28AE69F57773ED243107D334C863 /* CircleProgressView.modulemap */,
+				BF0DF2A4E0BEF8B42772BA4BFED0C646 /* CircleProgressView.xcconfig */,
+				B9BF9A472A4A182941F7C22990CA2CD0 /* CircleProgressView-dummy.m */,
+				66A0782C199686D62343A93969F6C560 /* CircleProgressView-prefix.pch */,
+				9CED6A0A875DBD11242D3044ACB76212 /* CircleProgressView-umbrella.h */,
+				08D3C858106EC9CF1C3047DC71E9634E /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CircleProgressView";
+			sourceTree = "<group>";
+		};
+		6A7D7F782E3F1C010C560D9FC642C4AA /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				331519233533EDBA668AA8A85828A02C /* Pods-SafetyBlanket */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		6FB0F57CDDA0FA8535D78C01305CC4C1 /* CircleProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				4DC21132B68808A8E4AECD18803FE798 /* CircleProgressView.swift */,
+				536E8E0A2A57963F9C08A83DF0FABA68 /* Support Files */,
+			);
+			path = CircleProgressView;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				2AC53A4FD6E75F007C8D0ABC1F6172F8 /* Pods */,
+				FCFEB079A2CA2A43875B83AE85DAE69B /* Products */,
+				6A7D7F782E3F1C010C560D9FC642C4AA /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		FCFEB079A2CA2A43875B83AE85DAE69B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A167D7BF7BD02D491644863303D346D0 /* CircleProgressView.framework */,
+				A8EA1F5FF45FC82BD9093D37BCD027FE /* Pods_SafetyBlanket.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		42CEAB67C3F55804E24B0B7CC7E7DDDD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E05A58362D3041C8F8227E4EF869D92 /* Pods-SafetyBlanket-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66E7B7E96D8BC55753BEB6DB7C879418 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CB1535EB6286B1B587AC9BA17D25E4E /* CircleProgressView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		496D53F8D49F1555E901B122E517473D /* Pods-SafetyBlanket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0489D38E474F65FCD9030C06A133D990 /* Build configuration list for PBXNativeTarget "Pods-SafetyBlanket" */;
+			buildPhases = (
+				DCA435C7BB548F81E7062264B064630B /* Sources */,
+				98736C988CD8418C25C978F9E50F0208 /* Frameworks */,
+				42CEAB67C3F55804E24B0B7CC7E7DDDD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E61F5D9ED4E15CEFC2457797D54BFEE0 /* PBXTargetDependency */,
+			);
+			name = "Pods-SafetyBlanket";
+			productName = "Pods-SafetyBlanket";
+			productReference = A8EA1F5FF45FC82BD9093D37BCD027FE /* Pods_SafetyBlanket.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6AAAF367F62F10D68011597AC6A0B113 /* CircleProgressView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9D1C693865B10C4F6F975D266FAF39F /* Build configuration list for PBXNativeTarget "CircleProgressView" */;
+			buildPhases = (
+				449E20D41ACDE88A7DAA2960D545CA07 /* Sources */,
+				29F20DE40F5419B9D4505A5B858930AB /* Frameworks */,
+				66E7B7E96D8BC55753BEB6DB7C879418 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CircleProgressView;
+			productName = CircleProgressView;
+			productReference = A167D7BF7BD02D491644863303D346D0 /* CircleProgressView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = FCFEB079A2CA2A43875B83AE85DAE69B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6AAAF367F62F10D68011597AC6A0B113 /* CircleProgressView */,
+				496D53F8D49F1555E901B122E517473D /* Pods-SafetyBlanket */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		449E20D41ACDE88A7DAA2960D545CA07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				034961F0D3F2DF1FDFF450BEE11AB32C /* CircleProgressView-dummy.m in Sources */,
+				335E50CC8551C6777641183195E446B5 /* CircleProgressView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCA435C7BB548F81E7062264B064630B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2111221EE513D5B2D8D0F9AA4E680A0 /* Pods-SafetyBlanket-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E61F5D9ED4E15CEFC2457797D54BFEE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CircleProgressView;
+			target = 6AAAF367F62F10D68011597AC6A0B113 /* CircleProgressView */;
+			targetProxy = 74C2E30DF02D0CBC0D2C1ED52A5913D7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		15A0ADCA9DD77507D5318E7E66C3ADA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF0DF2A4E0BEF8B42772BA4BFED0C646 /* CircleProgressView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CircleProgressView/CircleProgressView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CircleProgressView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CircleProgressView/CircleProgressView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = CircleProgressView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A53009A107E8AA13CE6198786CDF8F92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 133ED1A1FF9D00788B08DAD307EC9225 /* Pods-SafetyBlanket.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SafetyBlanket/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SafetyBlanket/Pods-SafetyBlanket.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_SafetyBlanket;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		D45245E38834D662BCB568C108AADAB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF0DF2A4E0BEF8B42772BA4BFED0C646 /* CircleProgressView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CircleProgressView/CircleProgressView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CircleProgressView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CircleProgressView/CircleProgressView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = CircleProgressView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DF89FD94B6A3D030DF7C50898F9B8D56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55F3F3C62F10BBB1B2D963CFC91CF5F5 /* Pods-SafetyBlanket.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SafetyBlanket/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SafetyBlanket/Pods-SafetyBlanket.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_SafetyBlanket;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0489D38E474F65FCD9030C06A133D990 /* Build configuration list for PBXNativeTarget "Pods-SafetyBlanket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF89FD94B6A3D030DF7C50898F9B8D56 /* Debug */,
+				A53009A107E8AA13CE6198786CDF8F92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
+				FB45FFD90572718D82AB9092B750F0CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9D1C693865B10C4F6F975D266FAF39F /* Build configuration list for PBXNativeTarget "CircleProgressView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D45245E38834D662BCB568C108AADAB0 /* Debug */,
+				15A0ADCA9DD77507D5318E7E66C3ADA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

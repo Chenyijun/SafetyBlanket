@@ -17,6 +17,14 @@ class ContactCell: UITableViewCell{
     @IBOutlet weak var lblFullname: UILabel!
     @IBOutlet weak var lblPhoneNumber: UILabel!
     @IBAction func callButton(sender: AnyObject) {
+        print(lblPhoneNumber.text)
+        if let phoneCallURL:NSURL = NSURL(string:"tel://\(lblPhoneNumber.text!)") {
+            
+            let application:UIApplication = UIApplication.sharedApplication()
+            if (application.canOpenURL(phoneCallURL)) {
+                application.openURL(phoneCallURL);
+            }
+        }
     }
     @IBAction func smsButton(sender: AnyObject, viewController: UIViewController){
         // Make sure the device can send text messages

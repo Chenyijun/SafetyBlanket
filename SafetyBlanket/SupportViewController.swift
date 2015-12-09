@@ -91,13 +91,6 @@ class SupportViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // MARK: Custom functions
     
-    func configureTableView() {
-        tblContacts.delegate = self
-        tblContacts.dataSource = self
-        tblContacts.registerNib(UINib(nibName: "ContactCell", bundle: nil), forCellReuseIdentifier: "idCellContact")
-    }
-    
-    
     func refetchContact(contact contact: CNContact, atIndexPath indexPath: NSIndexPath) {
         print("refetchContact")
         AppDelegate.getAppDelegate().requestForAccess { (accessGranted) -> Void in
@@ -121,39 +114,60 @@ class SupportViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     
+    func configureTableView() {
+        print("ConfigureTableView")
+        tblContacts.delegate = self
+        tblContacts.dataSource = self
+        tblContacts.registerNib(UINib(nibName: "ContactCell", bundle: nil), forCellReuseIdentifier: "idCellContact")
+    }
+
+    
+    
     
     // MARK: UITableView Delegate and Datasource functions
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        print("numberOfSections")
         return 1
     }
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int { //update number of rows in tableView
+        print("Number of Rows")
 //        return contacts.count
         return parseContacts.count
     }
     
-    
+    //create cell
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        print("Cell for Row")
         let cell = tableView.dequeueReusableCellWithIdentifier("idCellContact") as! ContactCell
-        
-        let currentContact = contacts[indexPath.row]
-//        let currentContact = parseContacts[indexPath.row] //PUDDING
-
-        
-        cell.lblFullname.text = "\(currentContact.givenName) \(currentContact.familyName)"
-        for phoneNumber:CNLabeledValue in currentContact.phoneNumbers {
-            let a = phoneNumber.value as! CNPhoneNumber
-            cell.lblPhoneNumber.text = "\(a.stringValue)"
-        }
-
-//        cell.lblPhoneNumber.text = "\(a.stringValue)"
-//        cell.lblFullname.text = CNContactFormatter.stringFromContact(currentContact, style: .FullName)
+        let currentContact = parseContacts[indexPath.row]
+        let contactFirstName = currentContact["firstName"] as! String
+        let contactLastName = currentContact["lastName"] as! String
+        let contactName = contactFirstName + " " + contactLastName
+        let contactNumber = currentContact["phoneNumber"] as! String
+        cell.lblFullname.text = contactName
+        cell.lblPhoneNumber.text = contactNumber
+        print("Cell")
         print(cell)
-        if !currentContact.isKeyAvailable(CNContactPhoneNumbersKey){
-            refetchContact(contact: currentContact, atIndexPath: indexPath)
-        }
+        
+//        let currentContact = contacts[indexPath.row]
+////        let currentContact = parseContacts[indexPath.row] //PUDDING
+//
+//        
+//        cell.lblFullname.text = "\(currentContact.givenName) \(currentContact.familyName)"
+//        for phoneNumber:CNLabeledValue in currentContact.phoneNumbers {
+//            let a = phoneNumber.value as! CNPhoneNumber
+//            cell.lblPhoneNumber.text = "\(a.stringValue)"
+//        }
+//
+////        cell.lblPhoneNumber.text = "\(a.stringValue)"
+////        cell.lblFullname.text = CNContactFormatter.stringFromContact(currentContact, style: .FullName)
+//        print(cell)
+//        if !currentContact.isKeyAvailable(CNContactPhoneNumbersKey){
+//            refetchContact(contact: currentContact, atIndexPath: indexPath)
+//        }
         return cell
     }
     
@@ -162,40 +176,40 @@ class SupportViewController: UIViewController, UITableViewDelegate, UITableViewD
         return 100.0
     }
     
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("tableView")
-        let selectedContact = contacts[indexPath.row] //PUDDING
-//        let selectedContact = parseContacts[indexPath.row]
-        
-        let keys = [CNContactFormatter.descriptorForRequiredKeysForStyle(CNContactFormatterStyle.FullName), CNContactPhoneNumbersKey]
-        
-        if selectedContact.areKeysAvailable([CNContactViewController.descriptorForRequiredKeys()]) {
-            let contactViewController = CNContactViewController(forContact: selectedContact)
-            contactViewController.contactStore = AppDelegate.getAppDelegate().contactStore
-            contactViewController.displayedPropertyKeys = keys
-            navigationController?.pushViewController(contactViewController, animated: true)
-        }
-        else {
-            AppDelegate.getAppDelegate().requestForAccess({ (accessGranted) -> Void in
-                if accessGranted {
-                    do {
-                        let contactRefetched = try AppDelegate.getAppDelegate().contactStore.unifiedContactWithIdentifier(selectedContact.identifier, keysToFetch: [CNContactViewController.descriptorForRequiredKeys()])
-                        
-                        dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                            let contactViewController = CNContactViewController(forContact: contactRefetched)
-                            contactViewController.contactStore = AppDelegate.getAppDelegate().contactStore
-                            contactViewController.displayedPropertyKeys = keys
-                            self.navigationController?.pushViewController(contactViewController, animated: true)
-                        })
-                    }
-                    catch {
-                        print("Unable to refetch the selected contact.", separator: "", terminator: "\n")
-                    }
-                }
-            })
-        }
-    }
+    //cell selection
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        print("tableView")
+//        let selectedContact = contacts[indexPath.row] //PUDDING
+////        let selectedContact = parseContacts[indexPath.row]
+//        
+//        let keys = [CNContactFormatter.descriptorForRequiredKeysForStyle(CNContactFormatterStyle.FullName), CNContactPhoneNumbersKey]
+//        
+//        if selectedContact.areKeysAvailable([CNContactViewController.descriptorForRequiredKeys()]) {
+//            let contactViewController = CNContactViewController(forContact: selectedContact)
+//            contactViewController.contactStore = AppDelegate.getAppDelegate().contactStore
+//            contactViewController.displayedPropertyKeys = keys
+//            navigationController?.pushViewController(contactViewController, animated: true)
+//        }
+//        else {
+//            AppDelegate.getAppDelegate().requestForAccess({ (accessGranted) -> Void in
+//                if accessGranted {
+//                    do {
+//                        let contactRefetched = try AppDelegate.getAppDelegate().contactStore.unifiedContactWithIdentifier(selectedContact.identifier, keysToFetch: [CNContactViewController.descriptorForRequiredKeys()])
+//                        
+//                        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+//                            let contactViewController = CNContactViewController(forContact: contactRefetched)
+//                            contactViewController.contactStore = AppDelegate.getAppDelegate().contactStore
+//                            contactViewController.displayedPropertyKeys = keys
+//                            self.navigationController?.pushViewController(contactViewController, animated: true)
+//                        })
+//                    }
+//                    catch {
+//                        print("Unable to refetch the selected contact.", separator: "", terminator: "\n")
+//                    }
+//                }
+//            })
+//        }
+//    }
     
     
     // MARK: AddContactViewControllerDelegate function
@@ -228,7 +242,8 @@ class SupportViewController: UIViewController, UITableViewDelegate, UITableViewD
 //        navigationController?.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
         let support : UIViewController = storyboard!.instantiateViewControllerWithIdentifier("Support")
 //        navigationController?.popToViewController(support, animated: true)
-        navigationController?.pushViewController(support, animated: true)
+//        navigationController?.pushViewController(support, animated: true)
+        navigationController?.dismissViewControllerAnimated(true, completion: nil)
 //        navigationController?.presentViewController(support, animated: true, completion: nil)
     }
     
@@ -242,10 +257,7 @@ class SupportViewController: UIViewController, UITableViewDelegate, UITableViewD
         } catch _ {
             allContacts = []
         }
-
         return allContacts
-
-        
     }
 
 }

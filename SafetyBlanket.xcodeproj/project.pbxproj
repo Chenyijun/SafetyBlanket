@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CA2F20FC6DE6DA3997F8906 /* Pods_SafetyBlanket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A838941A07538CA101ED96 /* Pods_SafetyBlanket.framework */; };
 		D13ABFF51C11EC7700E45E74 /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13ABFF41C11EC7700E45E74 /* SupportViewController.swift */; };
 		D13ABFF71C11EFC100E45E74 /* MessageComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13ABFF61C11EFC100E45E74 /* MessageComposer.swift */; };
 		D15831CE1C137C9300094EAE /* CreateContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15831CD1C137C9300094EAE /* CreateContactViewController.swift */; };
@@ -26,6 +27,9 @@
 		D15831EB1C14465C00094EAE /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D15831EA1C14465B00094EAE /* libsqlite3.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D15831ED1C14BB1400094EAE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15831EC1C14BB1400094EAE /* HomeViewController.swift */; };
 		D15831EF1C14BD5F00094EAE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15831EE1C14BD5F00094EAE /* SignUpViewController.swift */; };
+		D15831F11C16033900094EAE /* BreatheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15831F01C16033900094EAE /* BreatheViewController.swift */; };
+		D15831F31C16080200094EAE /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15831F21C16080200094EAE /* CircleProgressView.swift */; };
+		D15831F51C160DE100094EAE /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15831F41C160DE100094EAE /* Counter.swift */; };
 		D1D258351C0CC66C0018B123 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D258341C0CC66C0018B123 /* AppDelegate.swift */; };
 		D1D258371C0CC66C0018B123 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D258361C0CC66C0018B123 /* ViewController.swift */; };
 		D1D2583A1C0CC66C0018B123 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1D258381C0CC66C0018B123 /* Main.storyboard */; };
@@ -45,6 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		78BD9E2B314156DC7B2052A9 /* Pods-SafetyBlanket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafetyBlanket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SafetyBlanket/Pods-SafetyBlanket.debug.xcconfig"; sourceTree = "<group>"; };
+		91A838941A07538CA101ED96 /* Pods_SafetyBlanket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SafetyBlanket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF8377B782EE3BCF39C38A99 /* Pods-SafetyBlanket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafetyBlanket.release.xcconfig"; path = "Pods/Target Support Files/Pods-SafetyBlanket/Pods-SafetyBlanket.release.xcconfig"; sourceTree = "<group>"; };
 		D13ABFF41C11EC7700E45E74 /* SupportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
 		D13ABFF61C11EFC100E45E74 /* MessageComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageComposer.swift; sourceTree = "<group>"; };
 		D15831CD1C137C9300094EAE /* CreateContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateContactViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +71,9 @@
 		D15831EA1C14465B00094EAE /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		D15831EC1C14BB1400094EAE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D15831EE1C14BD5F00094EAE /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		D15831F01C16033900094EAE /* BreatheViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreatheViewController.swift; sourceTree = "<group>"; };
+		D15831F21C16080200094EAE /* CircleProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
+		D15831F41C160DE100094EAE /* Counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		D1D2582F1C0CC66C0018B123 /* SafetyBlanket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafetyBlanket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1D258331C0CC66C0018B123 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1D258341C0CC66C0018B123 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +103,7 @@
 				D15831DD1C1445FC00094EAE /* CoreGraphics.framework in Frameworks */,
 				D15831DB1C1445F600094EAE /* CFNetwork.framework in Frameworks */,
 				D15831D91C1445ED00094EAE /* AudioToolbox.framework in Frameworks */,
+				0CA2F20FC6DE6DA3997F8906 /* Pods_SafetyBlanket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +117,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C6A0C2661CD4D6F804314EF2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78BD9E2B314156DC7B2052A9 /* Pods-SafetyBlanket.debug.xcconfig */,
+				AF8377B782EE3BCF39C38A99 /* Pods-SafetyBlanket.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D15831D71C14459800094EAE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +141,7 @@
 				D15831D81C1445ED00094EAE /* AudioToolbox.framework */,
 				D15831D31C14458A00094EAE /* Bolts.framework */,
 				D15831D41C14458A00094EAE /* Parse.framework */,
+				91A838941A07538CA101ED96 /* Pods_SafetyBlanket.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -132,6 +153,7 @@
 				D1D258311C0CC66C0018B123 /* SafetyBlanket */,
 				D1D258471C0CC66C0018B123 /* SafetyBlanketTests */,
 				D1D258301C0CC66C0018B123 /* Products */,
+				C6A0C2661CD4D6F804314EF2 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +182,9 @@
 				D15831CF1C137EC500094EAE /* ContactCell.swift */,
 				D15831EC1C14BB1400094EAE /* HomeViewController.swift */,
 				D15831EE1C14BD5F00094EAE /* SignUpViewController.swift */,
+				D15831F01C16033900094EAE /* BreatheViewController.swift */,
+				D15831F21C16080200094EAE /* CircleProgressView.swift */,
+				D15831F41C160DE100094EAE /* Counter.swift */,
 			);
 			path = SafetyBlanket;
 			sourceTree = "<group>";
@@ -196,9 +221,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1D2584E1C0CC66C0018B123 /* Build configuration list for PBXNativeTarget "SafetyBlanket" */;
 			buildPhases = (
+				FF9C0483A93D43526D69B87A /* Check Pods Manifest.lock */,
 				D1D2582B1C0CC66C0018B123 /* Sources */,
 				D1D2582C1C0CC66C0018B123 /* Frameworks */,
 				D1D2582D1C0CC66C0018B123 /* Resources */,
+				85225C89B1CFA3CF442BA76A /* Embed Pods Frameworks */,
+				89AC62BD80F15ADCC99B8E03 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -286,6 +314,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		85225C89B1CFA3CF442BA76A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SafetyBlanket/Pods-SafetyBlanket-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89AC62BD80F15ADCC99B8E03 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SafetyBlanket/Pods-SafetyBlanket-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF9C0483A93D43526D69B87A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D1D2582B1C0CC66C0018B123 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -293,10 +369,13 @@
 			files = (
 				D1D258371C0CC66C0018B123 /* ViewController.swift in Sources */,
 				D13ABFF71C11EFC100E45E74 /* MessageComposer.swift in Sources */,
+				D15831F51C160DE100094EAE /* Counter.swift in Sources */,
 				D15831EF1C14BD5F00094EAE /* SignUpViewController.swift in Sources */,
 				D1D258351C0CC66C0018B123 /* AppDelegate.swift in Sources */,
 				D13ABFF51C11EC7700E45E74 /* SupportViewController.swift in Sources */,
+				D15831F11C16033900094EAE /* BreatheViewController.swift in Sources */,
 				D15831D01C137EC500094EAE /* ContactCell.swift in Sources */,
+				D15831F31C16080200094EAE /* CircleProgressView.swift in Sources */,
 				D15831ED1C14BB1400094EAE /* HomeViewController.swift in Sources */,
 				D15831CE1C137C9300094EAE /* CreateContactViewController.swift in Sources */,
 			);
@@ -426,6 +505,7 @@
 		};
 		D1D2584F1C0CC66C0018B123 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78BD9E2B314156DC7B2052A9 /* Pods-SafetyBlanket.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -441,6 +521,7 @@
 		};
 		D1D258501C0CC66C0018B123 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF8377B782EE3BCF39C38A99 /* Pods-SafetyBlanket.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
