@@ -67,8 +67,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        view.layer.contents = UIImage(named:"blueBokeh")!.CGImage
-//        let button = UIButton(type: UIButtonType.System)
         loginButton.layer.cornerRadius = 10
         signUpButton.layer.cornerRadius = 10
         usernameField.leftViewMode = UITextFieldViewMode.Always

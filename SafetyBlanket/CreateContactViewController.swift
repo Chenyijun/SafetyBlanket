@@ -78,13 +78,6 @@ class CreateContactViewController: UIViewController, UITextFieldDelegate {
         
         do {
             contact.saveInBackground()
-//            let saveRequest = CNSaveRequest()
-//            saveRequest.addContact(newContact, toContainerWithIdentifier: nil)
-//            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Support")
-//            let navController = UINavigationController(rootViewController: viewController)
-//            navigationController?.presentViewController(navController, animated: true, completion: nil)
-
-//            try AppDelegate.getAppDelegate().contactStore.executeSaveRequest(saveRequest)
             navigationController?.popViewControllerAnimated(true)
         }
         catch {

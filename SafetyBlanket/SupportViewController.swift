@@ -60,7 +60,6 @@ class SupportViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     @IBAction func callNumber() {
-        //        if let phoneCallURL:NSURL = NSURL(string:"tel://\(phoneNumber)") {
         if let phoneCallURL:NSURL = NSURL(string:"tel://909-912-9986") {
             
             let application:UIApplication = UIApplication.sharedApplication()
@@ -97,7 +96,6 @@ class SupportViewController: UIViewController, UITableViewDelegate, UITableViewD
         print("refetchContact")
         AppDelegate.getAppDelegate().requestForAccess { (accessGranted) -> Void in
             if accessGranted {
-                // let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactEmailAddressesKey, CNContactBirthdayKey, CNContactImageDataKey]
                 let keys = [CNContactFormatter.descriptorForRequiredKeysForStyle(CNContactFormatterStyle.FullName), CNContactPhoneNumbersKey]
                 
                 do {

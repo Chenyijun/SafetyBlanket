@@ -87,25 +87,4 @@ class BreatheViewController: UIViewController {
             dispatch_get_main_queue(), closure)
     }
 
-//    let stopwatch = Stopwatch()
-//    
-//    func updateElapsedTimeLabel(timer: NSTimer) {
-//        if stopwatch.isRunning {
-//            elapsedTimeLabel.text = stopwatch.elapsedTimeAsString
-//        } else {
-//            timer.invalidate()
-//        }
-//    }
-//    
-//    @IBAction func startButtonTapped(sender: UIButton) {
-//        NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "updateElapsedTimeLabel:", userInfo: nil, repeats: true)
-//        stopwatch.start()
-//    }
-//    
-//    @IBAction func stopButtonTapped(sender: UIButton) {
-//        stopwatch.stop()
-//    }
-//    @IBOutlet weak var elapsedTimeLabel: UILabel!
-
-
 }

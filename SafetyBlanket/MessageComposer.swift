@@ -34,7 +34,6 @@ class MessageComposer: NSObject, MFMessageComposeViewControllerDelegate {
     }
     
     func callNumber(phoneNumber:String) {
-//        if let phoneCallURL:NSURL = NSURL(string:"tel://\(phoneNumber)") {
         if let phoneCallURL:NSURL = NSURL(string:"tel://909-912-9987") {
 
             let application:UIApplication = UIApplication.sharedApplication()

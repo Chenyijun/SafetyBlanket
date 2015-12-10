@@ -22,6 +22,7 @@ An app for anxiety attacks.
 ###### Breathe Tab
 * Counter that tells you when to inhale and when to exhale
 * Ability to rest counter
+
 ---
 Screenshots are located in "Doc" folder
 

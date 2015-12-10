@@ -73,8 +73,6 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addBackground()
-//        loginButton.layer.cornerRadius = 10
-//        signUpButton.layer.cornerRadius = 10
         usernameField.leftViewMode = UITextFieldViewMode.Always
         usernameField.leftView = UIImageView(image: UIImage(named: "smiley"))
         passwordField.leftViewMode = UITextFieldViewMode.Always

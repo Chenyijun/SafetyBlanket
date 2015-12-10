@@ -26,7 +26,6 @@ class HomeViewController: UIViewController {
         }else{
             print("isNotPlaying")
             audioPlayer.play()
-//            playBackgroundMusic("Dexter Britain - Same Old Moments - 01 Breaking Light")
         musicButton.setImage(UIImage(named: "speakerPlay2"), forState: .Normal)
             isPlaying = true
 
