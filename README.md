@@ -2,10 +2,10 @@
 An app for anxiety attacks.
 
 ### App features:
-	* Create an account
+* Create an account
 
 ###### Home
-	* Calming background song that you can toggle
+* Calming background song that you can toggle
 
 ###### Support Tab
 * Add contacts directly from contacts book
