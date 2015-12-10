@@ -38,6 +38,7 @@ class BreatheViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addBackground()
         progressLabel.text = String(counter)
         // Do any additional setup after loading the view.
     }
@@ -64,6 +65,8 @@ class BreatheViewController: UIViewController {
         self.circleProgressView.progress = Double(miliCounter)/11
         if(breathe == "inhale"){
             self.circleProgressView.centerFillColor = UIColor.whiteColor()
+        }else{
+            self.circleProgressView.centerImage = UIImage(named:"blueBokeh")!
         }
     }
     

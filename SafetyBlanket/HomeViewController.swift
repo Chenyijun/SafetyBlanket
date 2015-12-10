@@ -12,7 +12,15 @@ import Parse
 class HomeViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     
+    override func viewWillDisappear(animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated);
+        super.viewWillDisappear(animated)
+    }
+    
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+
         if (PFUser.currentUser() == nil) {
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 
@@ -24,6 +32,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addBackground()
         if let name = PFUser.currentUser()?["name"] as? String {
             self.nameLabel.text = "Hey " + name
         }

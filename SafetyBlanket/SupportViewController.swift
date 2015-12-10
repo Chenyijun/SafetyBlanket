@@ -26,6 +26,7 @@ class SupportViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
+        self.view.addBackground()
         // Do any additional setup after loading the view.
     }
 

@@ -36,7 +36,7 @@ class CreateContactViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.addBackground()
         txtFirstname.delegate = self
         txtLastname.delegate = self
         txtPhone.delegate = self
