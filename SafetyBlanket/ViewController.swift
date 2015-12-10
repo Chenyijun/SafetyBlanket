@@ -13,21 +13,23 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
     
     @IBAction func loginAction(sender: AnyObject) {
         let username = self.usernameField.text
         let password = self.passwordField.text
         
         // Validate the text fields
-//        if count(username) < 5 {
-//            var alert = UIAlertView(title: "Invalid", message: "Username must be greater than 5 characters", delegate: self, cancelButtonTitle: "OK")
-//            alert.show()
-//            
-//        } else if count(password) < 8 {
-//            var alert = UIAlertView(title: "Invalid", message: "Password must be greater than 8 characters", delegate: self, cancelButtonTitle: "OK")
-//            alert.show()
-//            
-//        } else {
+        if username!.characters.count < 5 {
+            var alert = UIAlertView(title: "Invalid", message: "Username must be greater than 5 characters", delegate: self, cancelButtonTitle: "OK")
+            alert.show()
+            
+        } else if password!.characters.count < 3 {
+            var alert = UIAlertView(title: "Invalid", message: "Password must be greater than 3 characters", delegate: self, cancelButtonTitle: "OK")
+            alert.show()
+            
+        } else {
             // Run a spinner to show a task in progress
             let spinner: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 150, 150)) as UIActivityIndicatorView
             spinner.startAnimating()
@@ -52,17 +54,37 @@ class ViewController: UIViewController {
                     alert.show()
                 }
             })
-//        }
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        view.layer.contents = UIImage(named:"blueBokeh")!.CGImage
+//        let button = UIButton(type: UIButtonType.System)
+        loginButton.layer.cornerRadius = 10
+        signUpButton.layer.cornerRadius = 10
+        usernameField.leftViewMode = UITextFieldViewMode.Always
+        usernameField.leftView = UIImageView(image: UIImage(named: "smiley"))
+        passwordField.leftViewMode = UITextFieldViewMode.Always
+        passwordField.leftView = UIImageView(image: UIImage(named: "lock"))
+        self.view.addBackground()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func resizeImage(image: UIImage, newHeight: CGFloat) -> UIImage {
+        let scale = newHeight / image.size.height
+        let newWidth = image.size.width * scale
+        UIGraphicsBeginImageContext(CGSizeMake(newWidth, newHeight))
+        image.drawInRect(CGRectMake(0, 0, newWidth, newHeight))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage
     }
 
 

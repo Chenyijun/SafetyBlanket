@@ -43,6 +43,13 @@ class CreateContactViewController: UIViewController, UITextFieldDelegate {
         
         let saveBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Save, target: self, action: "createContact")
         navigationItem.rightBarButtonItem = saveBarButtonItem
+        
+        txtFirstname.leftViewMode = UITextFieldViewMode.Always
+        txtFirstname.leftView = UIImageView(image: UIImage(named: "smiley"))
+        txtLastname.leftViewMode = UITextFieldViewMode.Always
+        txtLastname.leftView = UIImageView(image: UIImage(named: "smiley"))
+        txtPhone.leftViewMode = UITextFieldViewMode.Always
+        txtPhone.leftView = UIImageView(image: UIImage(named: "phone"))
     }
     
     override func didReceiveMemoryWarning() {

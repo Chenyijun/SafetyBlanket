@@ -24,19 +24,19 @@ class SignUpViewController: UIViewController {
         let name = self.nameField.text!
         let finalEmail = email.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         // Validate the text fields
-//        if count(username) < 5 {
-//            var alert = UIAlertView(title: "Invalid", message: "Username must be greater than 5 characters", delegate: self, cancelButtonTitle: "OK")
-//            alert.show()
+        if username.characters.count < 5 {
+            var alert = UIAlertView(title: "Invalid", message: "Username must be greater than 5 characters", delegate: self, cancelButtonTitle: "OK")
+            alert.show()
         
-//        } else if count(password) < 8 {
-//            var alert = UIAlertView(title: "Invalid", message: "Password must be greater than 8 characters", delegate: self, cancelButtonTitle: "OK")
-//            alert.show()
+        } else if password.characters.count < 3 {
+            var alert = UIAlertView(title: "Invalid", message: "Password must be greater than 3 characters", delegate: self, cancelButtonTitle: "OK")
+            alert.show()
             
-//        } else if count(email) < 8 {
-//            var alert = UIAlertView(title: "Invalid", message: "Please enter a valid email address", delegate: self, cancelButtonTitle: "OK")
-//            alert.show()
+        } else if email.characters.count < 3 {
+            var alert = UIAlertView(title: "Invalid", message: "Please enter a valid email address", delegate: self, cancelButtonTitle: "OK")
+            alert.show()
             
-//        } else {
+        } else {
             // Run a spinner to show a task in progress
             let spinner: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 150, 150)) as UIActivityIndicatorView
             spinner.startAnimating()
@@ -67,11 +67,21 @@ class SignUpViewController: UIViewController {
                     })
                 }
             })
-        //}
+        }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        loginButton.layer.cornerRadius = 10
+//        signUpButton.layer.cornerRadius = 10
+        usernameField.leftViewMode = UITextFieldViewMode.Always
+        usernameField.leftView = UIImageView(image: UIImage(named: "smiley"))
+        passwordField.leftViewMode = UITextFieldViewMode.Always
+        passwordField.leftView = UIImageView(image: UIImage(named: "lock"))
+        nameField.leftViewMode = UITextFieldViewMode.Always
+        nameField.leftView = UIImageView(image: UIImage(named: "smiley"))
+        emailField.leftViewMode = UITextFieldViewMode.Always
+        emailField.leftView = UIImageView(image: UIImage(named: "mail"))
 
         // Do any additional setup after loading the view.
     }

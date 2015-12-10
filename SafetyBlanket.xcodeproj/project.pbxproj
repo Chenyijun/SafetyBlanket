@@ -10,6 +10,7 @@
 		0CA2F20FC6DE6DA3997F8906 /* Pods_SafetyBlanket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A838941A07538CA101ED96 /* Pods_SafetyBlanket.framework */; };
 		D13ABFF51C11EC7700E45E74 /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13ABFF41C11EC7700E45E74 /* SupportViewController.swift */; };
 		D13ABFF71C11EFC100E45E74 /* MessageComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13ABFF61C11EFC100E45E74 /* MessageComposer.swift */; };
+		D140C6FF1C19940300783D87 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D140C6FE1C19940300783D87 /* Extensions.swift */; };
 		D15831CE1C137C9300094EAE /* CreateContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15831CD1C137C9300094EAE /* CreateContactViewController.swift */; };
 		D15831D01C137EC500094EAE /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15831CF1C137EC500094EAE /* ContactCell.swift */; };
 		D15831D21C13A38300094EAE /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D15831D11C13A38300094EAE /* ContactCell.xib */; };
@@ -54,6 +55,7 @@
 		AF8377B782EE3BCF39C38A99 /* Pods-SafetyBlanket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafetyBlanket.release.xcconfig"; path = "Pods/Target Support Files/Pods-SafetyBlanket/Pods-SafetyBlanket.release.xcconfig"; sourceTree = "<group>"; };
 		D13ABFF41C11EC7700E45E74 /* SupportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
 		D13ABFF61C11EFC100E45E74 /* MessageComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageComposer.swift; sourceTree = "<group>"; };
+		D140C6FE1C19940300783D87 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D15831CD1C137C9300094EAE /* CreateContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateContactViewController.swift; sourceTree = "<group>"; };
 		D15831CF1C137EC500094EAE /* ContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		D15831D11C13A38300094EAE /* ContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			children = (
 				D1D258341C0CC66C0018B123 /* AppDelegate.swift */,
 				D1D258361C0CC66C0018B123 /* ViewController.swift */,
+				D140C6FE1C19940300783D87 /* Extensions.swift */,
 				D1D258381C0CC66C0018B123 /* Main.storyboard */,
 				D1D2583B1C0CC66C0018B123 /* Images.xcassets */,
 				D1D2583D1C0CC66C0018B123 /* LaunchScreen.xib */,
@@ -378,6 +381,7 @@
 				D15831F31C16080200094EAE /* CircleProgressView.swift in Sources */,
 				D15831ED1C14BB1400094EAE /* HomeViewController.swift in Sources */,
 				D15831CE1C137C9300094EAE /* CreateContactViewController.swift in Sources */,
+				D140C6FF1C19940300783D87 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

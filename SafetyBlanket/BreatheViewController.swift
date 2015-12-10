@@ -54,7 +54,6 @@ class BreatheViewController: UIViewController {
             miliCounter = 1.0
             counter = 1
         }
-        print(miliCounter)
         if counter > 4{
             breathe = "exhale"
         }else{

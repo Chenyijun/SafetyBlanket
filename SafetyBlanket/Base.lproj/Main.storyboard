@@ -114,10 +114,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CtP-LT-OFH" customClass="CircleProgressView" customModule="CircleProgressView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CtP-LT-OFH" customClass="CircleProgressView" customModule="CircleProgressView">
                                 <rect key="frame" x="167" y="151" width="266" height="244"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WxY-Df-PAB">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WxY-Df-PAB">
                                         <rect key="frame" x="50" y="57" width="167" height="119"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="55"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -135,9 +135,11 @@
                                     <constraint firstAttribute="trailing" secondItem="url-2V-exq" secondAttribute="trailing" constant="56" id="01v-qB-JBr"/>
                                     <constraint firstItem="WxY-Df-PAB" firstAttribute="top" secondItem="CtP-LT-OFH" secondAttribute="top" constant="57" id="0GJ-sL-6bq"/>
                                     <constraint firstItem="url-2V-exq" firstAttribute="top" secondItem="WxY-Df-PAB" secondAttribute="bottom" constant="-21" id="DRB-u6-PLM"/>
+                                    <constraint firstAttribute="width" constant="266" id="DTL-gO-DV1"/>
                                     <constraint firstAttribute="bottom" secondItem="WxY-Df-PAB" secondAttribute="bottom" constant="68" id="Plx-GQ-QBz"/>
                                     <constraint firstItem="url-2V-exq" firstAttribute="leading" secondItem="CtP-LT-OFH" secondAttribute="leading" constant="56" id="ZkT-Xk-d6d"/>
                                     <constraint firstItem="WxY-Df-PAB" firstAttribute="leading" secondItem="CtP-LT-OFH" secondAttribute="leading" constant="50" id="coN-wv-do3"/>
+                                    <constraint firstAttribute="height" constant="244" id="emz-rH-ZM9"/>
                                     <constraint firstAttribute="trailing" secondItem="WxY-Df-PAB" secondAttribute="trailing" constant="49" id="fRG-ON-lE1"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -155,14 +157,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ro-sy-rb2">
-                                <rect key="frame" x="188" y="461" width="34" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="Start"/>
-                                <connections>
-                                    <action selector="startCounter:" destination="nMm-fq-I9w" eventType="touchUpInside" id="50m-bX-ByX"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaF-1z-sMf">
                                 <rect key="frame" x="377" y="461" width="39" height="30"/>
                                 <state key="normal" title="Reset"/>
@@ -170,11 +164,18 @@
                                     <action selector="resetTimer:" destination="nMm-fq-I9w" eventType="touchUpInside" id="Sbx-MY-ZkO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U6o-dQ-Kaa">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U6o-dQ-Kaa">
                                 <rect key="frame" x="284" y="461" width="32" height="30"/>
                                 <state key="normal" title="Stop"/>
                                 <connections>
                                     <action selector="stopCounter:" destination="nMm-fq-I9w" eventType="touchUpInside" id="Uf9-g0-YTt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ro-sy-rb2">
+                                <rect key="frame" x="185" y="459" width="40" height="34"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startCounter:" destination="nMm-fq-I9w" eventType="touchUpInside" id="50m-bX-ByX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -186,6 +187,7 @@
                             <constraint firstItem="QaF-1z-sMf" firstAttribute="trailing" secondItem="CtP-LT-OFH" secondAttribute="trailing" id="Rd4-2M-vQu"/>
                             <constraint firstItem="U6o-dQ-Kaa" firstAttribute="top" secondItem="CtP-LT-OFH" secondAttribute="bottom" constant="66" id="XOx-VD-Pjb"/>
                             <constraint firstItem="5ro-sy-rb2" firstAttribute="top" secondItem="CtP-LT-OFH" secondAttribute="bottom" constant="66" id="bDf-f5-PLp"/>
+                            <constraint firstItem="CtP-LT-OFH" firstAttribute="top" secondItem="SdB-ze-bgX" secondAttribute="bottom" constant="87" id="eXs-cp-Vsg"/>
                             <constraint firstItem="U6o-dQ-Kaa" firstAttribute="centerX" secondItem="CtP-LT-OFH" secondAttribute="centerX" id="gnR-hu-iEp"/>
                             <constraint firstItem="CtP-LT-OFH" firstAttribute="centerX" secondItem="AW0-8B-ADX" secondAttribute="centerX" id="uBb-xR-sNd"/>
                         </constraints>
@@ -318,47 +320,55 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WhD-uS-TpX">
-                                <rect key="frame" x="76" y="217" width="454" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="60" y="217" width="480" height="30"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H58-pd-tgW">
-                                <rect key="frame" x="284" y="285" width="38" height="30"/>
-                                <state key="normal" title="Login"/>
-                                <connections>
-                                    <action selector="loginAction:" destination="ecM-lG-yds" eventType="touchUpInside" id="WVQ-JH-wDS"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Ec-w3-FSt">
-                                <rect key="frame" x="76" y="161" width="448" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="60" y="161" width="480" height="30"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAe-is-s1o">
-                                <rect key="frame" x="276" y="333" width="55" height="30"/>
+                                <rect key="frame" x="156" y="333" width="281" height="30"/>
+                                <color key="backgroundColor" red="0.71372549019999998" green="0.94509803920000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="45" minY="0.0" maxX="45" maxY="0.0"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <segue destination="FH2-x7-ztg" kind="show" id="pnH-kh-vSm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H58-pd-tgW">
+                                <rect key="frame" x="156" y="285" width="281" height="30"/>
+                                <color key="backgroundColor" red="0.71372549019999998" green="0.94509803920000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginAction:" destination="ecM-lG-yds" eventType="touchUpInside" id="WVQ-JH-wDS"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="H58-pd-tgW" firstAttribute="top" secondItem="WhD-uS-TpX" secondAttribute="bottom" constant="38" id="4lS-XH-IH3"/>
-                            <constraint firstItem="H58-pd-tgW" firstAttribute="centerX" secondItem="3jV-vC-Ay3" secondAttribute="centerX" id="FML-BY-uqq"/>
                             <constraint firstItem="iAe-is-s1o" firstAttribute="top" secondItem="H58-pd-tgW" secondAttribute="bottom" constant="18" id="FhL-2w-rlt"/>
-                            <constraint firstItem="7Ec-w3-FSt" firstAttribute="leading" secondItem="3jV-vC-Ay3" secondAttribute="leadingMargin" constant="56" id="QoC-V4-poF"/>
-                            <constraint firstItem="iAe-is-s1o" firstAttribute="centerX" secondItem="3jV-vC-Ay3" secondAttribute="centerX" id="dOZ-F3-GH2"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="7Ec-w3-FSt" secondAttribute="trailing" constant="56" id="kPw-ai-1mJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="WhD-uS-TpX" secondAttribute="trailing" constant="50" id="oeK-VX-ODz"/>
+                            <constraint firstItem="iAe-is-s1o" firstAttribute="height" secondItem="H58-pd-tgW" secondAttribute="height" id="GdO-Gi-gN3"/>
+                            <constraint firstItem="H58-pd-tgW" firstAttribute="centerX" secondItem="3jV-vC-Ay3" secondAttribute="centerX" id="NtW-oC-6Js"/>
+                            <constraint firstItem="7Ec-w3-FSt" firstAttribute="leading" secondItem="3jV-vC-Ay3" secondAttribute="leadingMargin" constant="40" id="QoC-V4-poF"/>
+                            <constraint firstItem="iAe-is-s1o" firstAttribute="centerX" secondItem="3jV-vC-Ay3" secondAttribute="centerX" id="f2A-Uq-0OA"/>
+                            <constraint firstItem="iAe-is-s1o" firstAttribute="width" secondItem="H58-pd-tgW" secondAttribute="width" id="jTl-ID-nUV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7Ec-w3-FSt" secondAttribute="trailing" constant="40" id="kPw-ai-1mJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WhD-uS-TpX" secondAttribute="trailing" constant="40" id="oeK-VX-ODz"/>
                             <constraint firstItem="7Ec-w3-FSt" firstAttribute="top" secondItem="r8g-Ib-6ue" secondAttribute="bottom" constant="97" id="tL9-qc-G3c"/>
-                            <constraint firstItem="WhD-uS-TpX" firstAttribute="leading" secondItem="3jV-vC-Ay3" secondAttribute="leadingMargin" constant="56" id="vkW-bI-44p"/>
+                            <constraint firstItem="WhD-uS-TpX" firstAttribute="leading" secondItem="3jV-vC-Ay3" secondAttribute="leadingMargin" constant="40" id="vkW-bI-44p"/>
                             <constraint firstItem="WhD-uS-TpX" firstAttribute="top" secondItem="7Ec-w3-FSt" secondAttribute="bottom" constant="26" id="wOK-0E-h3M"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="czZ-hl-k70"/>
                     <connections>
+                        <outlet property="loginButton" destination="H58-pd-tgW" id="uR1-al-afc"/>
                         <outlet property="passwordField" destination="WhD-uS-TpX" id="vPG-Om-thk"/>
+                        <outlet property="signUpButton" destination="iAe-is-s1o" id="2Dq-kD-aT8"/>
                         <outlet property="usernameField" destination="7Ec-w3-FSt" id="ukO-K8-j6X"/>
                     </connections>
                 </viewController>
