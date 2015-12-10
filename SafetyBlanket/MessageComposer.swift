@@ -13,7 +13,7 @@ import Parse
 let textMessageRecipients = ["909-912-9987"] // for pre-populating the recipients list (optional, depending on your needs)
 
 class MessageComposer: NSObject, MFMessageComposeViewControllerDelegate {
-    
+    var body = "Hey I've just added you as my support for the app Safety Blanket. If I'm ever having an anxiety attack, I might send you a message or call you. If you like to opt out, please tell me. Here's information about understanding and how to help someone with anxiety: https://goo.gl/akSMea"
     // A wrapper function to indicate whether or not a text message can be sent from the user's device
     func canSendText() -> Bool {
         return MFMessageComposeViewController.canSendText()
