@@ -8,20 +8,20 @@ An app for anxiety attacks.
 	* Calming background song that you can toggle
 
 ###### Support Tab
-	* Add contacts directly from contacts book
-	* Create contact
-		..* You can notify the contact that they have been added to the app and give them resources to understand how to help
-	* You can call or message these contacts. The messages are pre-populated to say "Hey are you busy? Can you call me?".
-	..* Typically during an anxiety attack, your hands are shaking too much to type properly. 
-	..* This feature is for those who have difficulties of reaching out because of the fear of being a burden.
-	* Emergency Anxiety Message
-	..* If you're alone in public or if it's very sudden, you can alert people around you with the message.
-	* Helpful Numbers
-	..* Numbers of Crisis Call Center and Suicide Hotline
+* Add contacts directly from contacts book
+* Create contact
+..* You can notify the contact that they have been added to the app and give them resources to understand how to help
+* You can call or message these contacts. The messages are pre-populated to say "Hey are you busy? Can you call me?".
+..* Typically during an anxiety attack, your hands are shaking too much to type properly. 
+..* This feature is for those who have difficulties of reaching out because of the fear of being a burden.
+* Emergency Anxiety Message
+..* If you're alone in public or if it's very sudden, you can alert people around you with the message.
+* Helpful Numbers
+..* Numbers of Crisis Call Center and Suicide Hotline
 
 ###### Breathe Tab
-	* Counter that tells you when to inhale and when to exhale
-	* Ability to rest counter
+* Counter that tells you when to inhale and when to exhale
+* Ability to rest counter
 ---
 Screenshots are located in "Doc" folder
 
