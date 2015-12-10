@@ -65,19 +65,17 @@ class BreatheViewController: UIViewController {
         }
         if counter > 4{
             breathe = "exhale"
+            self.circleProgressView.centerImage = UIImage(named:"blueBokeh")!
             instructions.text = "Exhale slowly through your mouth, pushing out all the air."
         }else{
             breathe = "inhale"
             instructions.text = "Inhale slowly through your nose, pushing your belly out."
+            self.circleProgressView.centerImage = nil
+            self.circleProgressView.centerFillColor = UIColor.whiteColor()
         }
         progressLabel.text = String(counter)
         breatheInst.text = String(breathe)
         self.circleProgressView.progress = Double(miliCounter)/11
-        if(breathe == "inhale"){
-            self.circleProgressView.centerFillColor = UIColor.whiteColor()
-        }else{
-            self.circleProgressView.centerImage = UIImage(named:"blueBokeh")!
-        }
     }
     
     func delay(delay:Double, closure:()->()) {

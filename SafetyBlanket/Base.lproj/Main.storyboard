@@ -636,7 +636,7 @@
                                     <constraint firstAttribute="width" constant="260" id="HOV-M8-oaJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qet-Oi-pso">
                                 <rect key="frame" x="41" y="319" width="430" height="39"/>
