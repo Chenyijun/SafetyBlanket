@@ -178,7 +178,7 @@
                                     <action selector="startStopCounter:" destination="nMm-fq-I9w" eventType="touchUpInside" id="Ieq-zT-fUd"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Inhale slowly through your nose, pushing your belly out." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raj-f3-d9d">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Inhale slowly through your nose, pushing your belly out." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raj-f3-d9d">
                                 <rect key="frame" x="75" y="519" width="425" height="21"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -424,6 +424,12 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" keyboardDismissMode="interactive" text="We can communicate using this text box." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9H8-SM-JOW">
+                                <rect key="frame" x="33" y="294" width="504" height="263"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnQ-qv-znJ">
                                 <rect key="frame" x="33" y="173" width="520" height="81.5"/>
                                 <string key="text">I gave you my phone because I can't talk right now but I am still capable of text comminucation. Please stay calm and lead me to a quiet place if possible. I've been through this before and it is still terrifying but not dangerous.</string>
@@ -431,15 +437,10 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" keyboardDismissMode="interactive" text="We can communicate using this text box." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9H8-SM-JOW">
-                                <rect key="frame" x="33" y="294" width="504" height="263"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="oiU-Hh-4uf" firstAttribute="leading" secondItem="HAp-Zu-Utf" secondAttribute="leadingMargin" constant="20" id="7Gq-32-eJn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9H8-SM-JOW" secondAttribute="trailing" constant="20" id="9SY-fn-1h0"/>
                             <constraint firstItem="9H8-SM-JOW" firstAttribute="leading" secondItem="HAp-Zu-Utf" secondAttribute="leadingMargin" constant="20" id="DNb-wN-7vz"/>
                             <constraint firstItem="xnQ-qv-znJ" firstAttribute="top" secondItem="oiU-Hh-4uf" secondAttribute="bottom" constant="41.5" id="Gk1-54-4yA"/>
@@ -449,7 +450,14 @@
                             <constraint firstItem="oiU-Hh-4uf" firstAttribute="centerX" secondItem="HAp-Zu-Utf" secondAttribute="centerX" id="WjL-dj-bYN"/>
                             <constraint firstItem="9H8-SM-JOW" firstAttribute="top" secondItem="xnQ-qv-znJ" secondAttribute="bottom" constant="39.5" id="ZAA-Rg-FWY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xnQ-qv-znJ" secondAttribute="trailing" constant="20" id="nDa-4D-7DC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oiU-Hh-4uf" secondAttribute="trailing" constant="20" id="ngD-kv-4fO"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="U0f-Hw-NHM"/>
+                                <exclude reference="WjL-dj-bYN"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="defaultMessage" destination="xnQ-qv-znJ" id="7Vk-3r-ODa"/>

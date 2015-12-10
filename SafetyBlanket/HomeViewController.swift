@@ -21,13 +21,13 @@ class HomeViewController: UIViewController {
         if (isPlaying==true){
             print("isPlaying")
             audioPlayer.pause()
-            musicButton.setImage(UIImage(named: "speakerPlay2"), forState: .Normal)
+            musicButton.setImage(UIImage(named: "speakerStop2"), forState: .Normal)
             isPlaying = false
         }else{
             print("isNotPlaying")
             audioPlayer.play()
 //            playBackgroundMusic("Dexter Britain - Same Old Moments - 01 Breaking Light")
-        musicButton.setImage(UIImage(named: "speakerStop2"), forState: .Normal)
+        musicButton.setImage(UIImage(named: "speakerPlay2"), forState: .Normal)
             isPlaying = true
 
         }
