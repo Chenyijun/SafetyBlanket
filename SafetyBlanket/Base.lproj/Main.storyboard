@@ -18,36 +18,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5o-ne-xrr">
-                                <rect key="frame" x="20" y="402" width="276" height="178"/>
+                            <button opaque="NO" contentMode="center" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5o-ne-xrr">
+                                <rect key="frame" x="98" y="435" width="125" height="112"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="178" id="Vi4-IO-o8g"/>
                                 </constraints>
-                                <state key="normal" title="Support"/>
+                                <state key="normal" image="supportIcon"/>
                                 <connections>
                                     <segue destination="QZ1-Mg-6sF" kind="push" id="bxu-SM-QwR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhh-7Q-w3a">
-                                <rect key="frame" x="20" y="77" width="44" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ty0-AI-Rtz">
-                                <rect key="frame" x="20" y="106" width="560" height="271"/>
+                            <imageView userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="safetyBlanketMascot" translatesAutoresizingMaskIntoConstraints="NO" id="ty0-AI-Rtz">
+                                <rect key="frame" x="20" y="106" width="560" height="272"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0le-Ht-cCx">
-                                <rect key="frame" x="296" y="402" width="284" height="180"/>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0le-Ht-cCx">
+                                <rect key="frame" x="300" y="403" width="280" height="178"/>
                                 <color key="backgroundColor" red="0.51372549019607838" green="0.72941176470588232" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Breathe"/>
+                                <state key="normal" image="BreatheIcon"/>
                                 <connections>
                                     <segue destination="nMm-fq-I9w" kind="push" id="Jmq-vh-LmL"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Everything will be okay." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lke-fO-wKP">
+                                <rect key="frame" x="232" y="160" width="98" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="98" id="szy-iu-5iF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.17136179445581567" green="0.0037132085660438897" blue="0.59763652146464641" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hello " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhh-7Q-w3a">
+                                <rect key="frame" x="20" y="88" width="319.5" height="20.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.71230134146620916" green="0.94346790947705617" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.71372549019607845" green="0.94509803921568625" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="0le-Ht-cCx" secondAttribute="trailing" id="0EE-1e-Po5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ty0-AI-Rtz" secondAttribute="trailing" id="194-dB-cwb"/>
@@ -55,11 +64,14 @@
                             <constraint firstItem="0le-Ht-cCx" firstAttribute="width" secondItem="B5o-ne-xrr" secondAttribute="width" id="8Bm-ai-8Bd"/>
                             <constraint firstItem="0le-Ht-cCx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IMv-gR-r8W"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="B5o-ne-xrr" secondAttribute="bottom" constant="20" id="MI6-Nr-Rqr"/>
+                            <constraint firstItem="ty0-AI-Rtz" firstAttribute="leading" secondItem="Lke-fO-wKP" secondAttribute="trailing" constant="-309" id="MsM-9A-CeR"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Nhh-7Q-w3a" secondAttribute="leading" id="OB1-jb-XfY"/>
                             <constraint firstItem="B5o-ne-xrr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PZI-Sm-Kye"/>
                             <constraint firstItem="0le-Ht-cCx" firstAttribute="top" secondItem="B5o-ne-xrr" secondAttribute="bottom" constant="56" id="Qme-Ma-zk2"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0le-Ht-cCx" secondAttribute="bottom" constant="19" id="TcX-l6-sY5"/>
                             <constraint firstAttribute="leadingMargin" secondItem="B5o-ne-xrr" secondAttribute="leading" id="aHg-u3-4dv"/>
                             <constraint firstItem="0le-Ht-cCx" firstAttribute="height" secondItem="B5o-ne-xrr" secondAttribute="height" id="bAh-rb-o5l"/>
+                            <constraint firstItem="Nhh-7Q-w3a" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24" id="bv4-Cj-xc6"/>
                             <constraint firstAttribute="leadingMargin" secondItem="ty0-AI-Rtz" secondAttribute="leading" id="gQV-pE-NO3"/>
                             <constraint firstItem="B5o-ne-xrr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gVf-MV-UVC"/>
                             <constraint firstItem="0le-Ht-cCx" firstAttribute="top" secondItem="ty0-AI-Rtz" secondAttribute="bottom" constant="25" id="kNQ-f9-6Js"/>
@@ -67,6 +79,7 @@
                             <constraint firstItem="0le-Ht-cCx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oai-Pc-aWz"/>
                             <constraint firstItem="0le-Ht-cCx" firstAttribute="leading" secondItem="B5o-ne-xrr" secondAttribute="trailing" id="rLk-UN-Dsz"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0le-Ht-cCx" secondAttribute="bottom" constant="63" id="tSL-Qi-u1h"/>
+                            <constraint firstItem="B5o-ne-xrr" firstAttribute="top" secondItem="Lke-fO-wKP" secondAttribute="bottom" constant="120" id="zTi-Sg-0ao"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -87,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3151" y="367"/>
+            <point key="canvasLocation" x="3055" y="305"/>
         </scene>
         <!--Breathe View Controller-->
         <scene sceneID="I8r-uJ-TYA">
@@ -522,4 +535,9 @@
             <point key="canvasLocation" x="2339" y="367"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BreatheIcon" width="124" height="115"/>
+        <image name="safetyBlanketMascot" width="213" height="255"/>
+        <image name="supportIcon" width="125" height="112"/>
+    </resources>
 </document>
