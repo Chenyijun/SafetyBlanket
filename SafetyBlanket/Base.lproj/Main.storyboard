@@ -57,7 +57,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0F-eq-BaI">
                                 <rect key="frame" x="541" y="70" width="43" height="45"/>
-                                <state key="normal" image="speakerStop2"/>
+                                <state key="normal" image="speakerPlay2"/>
                                 <connections>
                                     <action selector="controlMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wfc-SG-HeF"/>
                                 </connections>
@@ -729,7 +729,7 @@
         <image name="play" width="43" height="45"/>
         <image name="reset" width="30" height="33"/>
         <image name="safetyBlanketMascot" width="213" height="255"/>
-        <image name="speakerStop2" width="41" height="30"/>
+        <image name="speakerPlay2" width="41" height="31"/>
         <image name="supportIcon" width="125" height="112"/>
     </resources>
 </document>
