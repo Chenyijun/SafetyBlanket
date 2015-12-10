@@ -148,7 +148,8 @@ class SupportViewController: UIViewController, UITableViewDelegate, UITableViewD
         let contactName = contactFirstName + " " + contactLastName
         let contactNumber = currentContact["phoneNumber"] as! String
         cell.lblFullname.text = contactName
-        cell.lblPhoneNumber.text = contactNumber
+        cell.phoneNumber = contactNumber
+        print(cell.phoneNumber)
         return cell
     }
     

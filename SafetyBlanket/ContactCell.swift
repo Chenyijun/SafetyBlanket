@@ -14,12 +14,13 @@ import Parse
 class ContactCell: UITableViewCell{
     let messageComposer = MessageComposer()
     var controller: SupportViewController! = nil
+    var phoneNumber = ""
     @IBOutlet weak var lblFullname: UILabel!
-    @IBOutlet weak var lblPhoneNumber: UILabel!
     @IBAction func callButton(sender: AnyObject) {
-        print(lblPhoneNumber.text)
-        if let phoneCallURL:NSURL = NSURL(string:"tel://\(lblPhoneNumber.text!)") {
-            
+        print("Call button")
+        print(self.phoneNumber)
+        print(phoneNumber)
+        if let phoneCallURL:NSURL = NSURL(string:"tel://\(self.phoneNumber)") {
             let application:UIApplication = UIApplication.sharedApplication()
             if (application.canOpenURL(phoneCallURL)) {
                 application.openURL(phoneCallURL);
@@ -30,8 +31,7 @@ class ContactCell: UITableViewCell{
         // Make sure the device can send text messages
         if (messageComposer.canSendText()) {
             // Obtain a configured MFMessageComposeViewController
-            let messageComposeVC = messageComposer.configuredMessageComposeViewController(lblPhoneNumber.text!)
-            
+            let messageComposeVC = messageComposer.configuredMessageComposeViewController(self.phoneNumber)
             // Present the configured MFMessageComposeViewController instance
             // Note that the dismissal of the VC will be handled by the messageComposer instance,
             // since it implements the appropriate delegate call-back
