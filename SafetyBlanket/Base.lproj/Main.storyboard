@@ -55,12 +55,20 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0F-eq-BaI">
+                                <rect key="frame" x="541" y="70" width="43" height="45"/>
+                                <state key="normal" image="speakerStop2"/>
+                                <connections>
+                                    <action selector="controlMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wfc-SG-HeF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.71372549019607845" green="0.94509803921568625" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="0le-Ht-cCx" secondAttribute="trailing" id="0EE-1e-Po5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ty0-AI-Rtz" secondAttribute="trailing" id="194-dB-cwb"/>
                             <constraint firstItem="ty0-AI-Rtz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="42" id="2SO-VU-6p8"/>
+                            <constraint firstItem="E0F-eq-BaI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="14" id="3xt-g0-AJd"/>
                             <constraint firstItem="0le-Ht-cCx" firstAttribute="width" secondItem="B5o-ne-xrr" secondAttribute="width" id="8Bm-ai-8Bd"/>
                             <constraint firstItem="0le-Ht-cCx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IMv-gR-r8W"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="B5o-ne-xrr" secondAttribute="bottom" constant="20" id="MI6-Nr-Rqr"/>
@@ -78,6 +86,7 @@
                             <constraint firstItem="B5o-ne-xrr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kSo-pi-FnL"/>
                             <constraint firstItem="0le-Ht-cCx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oai-Pc-aWz"/>
                             <constraint firstItem="0le-Ht-cCx" firstAttribute="leading" secondItem="B5o-ne-xrr" secondAttribute="trailing" id="rLk-UN-Dsz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="E0F-eq-BaI" secondAttribute="trailing" constant="-5" id="sWj-0E-mFz"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0le-Ht-cCx" secondAttribute="bottom" constant="63" id="tSL-Qi-u1h"/>
                             <constraint firstItem="B5o-ne-xrr" firstAttribute="top" secondItem="Lke-fO-wKP" secondAttribute="bottom" constant="120" id="zTi-Sg-0ao"/>
                         </constraints>
@@ -95,6 +104,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Nzr-6S-P3e"/>
                     <connections>
+                        <outlet property="musicButton" destination="E0F-eq-BaI" id="3D3-ft-xfj"/>
                         <outlet property="nameLabel" destination="Nhh-7Q-w3a" id="5bZ-fj-1wL"/>
                     </connections>
                 </viewController>
@@ -340,7 +350,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Safety Blanket" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqC-Il-npb">
-                                <rect key="frame" x="179.5" y="72" width="241" height="52"/>
+                                <rect key="frame" x="180" y="95" width="241" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="325" id="bHQ-tL-7Hg"/>
                                     <constraint firstAttribute="height" constant="75" id="n2c-BM-QhA"/>
@@ -359,7 +369,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="H58-pd-tgW" firstAttribute="top" secondItem="WhD-uS-TpX" secondAttribute="bottom" constant="38" id="4lS-XH-IH3"/>
-                            <constraint firstItem="oqC-Il-npb" firstAttribute="top" secondItem="r8g-Ib-6ue" secondAttribute="bottom" constant="8" id="60O-Cx-Yx8"/>
+                            <constraint firstItem="oqC-Il-npb" firstAttribute="top" secondItem="r8g-Ib-6ue" secondAttribute="bottom" constant="31" id="60O-Cx-Yx8"/>
                             <constraint firstItem="iAe-is-s1o" firstAttribute="top" secondItem="H58-pd-tgW" secondAttribute="bottom" constant="18" id="FhL-2w-rlt"/>
                             <constraint firstItem="iAe-is-s1o" firstAttribute="height" secondItem="H58-pd-tgW" secondAttribute="height" id="GdO-Gi-gN3"/>
                             <constraint firstItem="oqC-Il-npb" firstAttribute="centerX" secondItem="3jV-vC-Ay3" secondAttribute="centerX" id="Hhl-pr-KTQ"/>
@@ -634,6 +644,7 @@
         <image name="play" width="43" height="45"/>
         <image name="reset" width="30" height="33"/>
         <image name="safetyBlanketMascot" width="213" height="255"/>
+        <image name="speakerStop2" width="41" height="30"/>
         <image name="supportIcon" width="125" height="112"/>
     </resources>
 </document>
