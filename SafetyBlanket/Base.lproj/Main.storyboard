@@ -424,7 +424,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" keyboardDismissMode="interactive" text="We can communicate using this text box." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9H8-SM-JOW">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" keyboardDismissMode="interactive" text="We can communicate using this text box." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9H8-SM-JOW">
                                 <rect key="frame" x="33" y="294" width="504" height="263"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
@@ -441,6 +441,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="oiU-Hh-4uf" firstAttribute="leading" secondItem="HAp-Zu-Utf" secondAttribute="leadingMargin" constant="20" id="7Gq-32-eJn"/>
+                            <constraint firstItem="6d1-wY-h68" firstAttribute="top" secondItem="9H8-SM-JOW" secondAttribute="bottom" constant="43" id="916-cf-sXC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9H8-SM-JOW" secondAttribute="trailing" constant="20" id="9SY-fn-1h0"/>
                             <constraint firstItem="9H8-SM-JOW" firstAttribute="leading" secondItem="HAp-Zu-Utf" secondAttribute="leadingMargin" constant="20" id="DNb-wN-7vz"/>
                             <constraint firstItem="xnQ-qv-znJ" firstAttribute="top" secondItem="oiU-Hh-4uf" secondAttribute="bottom" constant="41.5" id="Gk1-54-4yA"/>

@@ -18,6 +18,8 @@ class AnxietyMessageViewController: UIViewController {
         messageCommunication.layer.borderColor = UIColor.grayColor().CGColor
         messageCommunication.layer.cornerRadius = 5
         self.view.addBackground()
+        let tapGesture = UITapGestureRecognizer(target: self, action: "tap:")
+        view.addGestureRecognizer(tapGesture)
         // Do any additional setup after loading the view.
     }
 
@@ -26,7 +28,9 @@ class AnxietyMessageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func tap(gesture: UITapGestureRecognizer) {
+        messageCommunication.resignFirstResponder()
+    }
     /*
     // MARK: - Navigation
 
