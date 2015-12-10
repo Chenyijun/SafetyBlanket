@@ -62,10 +62,9 @@ class BreatheViewController: UIViewController {
         }
         progressLabel.text = String(counter)
         breatheInst.text = String(breathe)
+        self.circleProgressView.progress = Double(miliCounter)/11
         if(breathe == "inhale"){
-            self.circleProgressView.progress = Double(miliCounter)/11
-        }else{
-            self.circleProgressView.progress = Double(miliCounter)/11
+            self.circleProgressView.centerFillColor = UIColor.whiteColor()
         }
     }
     
