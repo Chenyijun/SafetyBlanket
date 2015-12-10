@@ -25,7 +25,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let name = PFUser.currentUser()?["name"] as? String {
-            self.nameLabel.text = name
+            self.nameLabel.text = "Hey " + name
         }
         // Do any additional setup after loading the view.
     }
