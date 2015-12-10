@@ -18,9 +18,9 @@ class CreateContactViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var txtLastname: UITextField!
     
     @IBOutlet weak var txtPhone: UITextField!
-    
+    @IBOutlet weak var notifyButton: UIButton!
     @IBAction func notifyContact(sender: AnyObject) {
-        
+        checkField()
         //send message
         if (messageComposer.canSendText()) {
             let messageComposeVC = messageComposer.configuredMessageComposeViewController(txtPhone.text!)
@@ -50,6 +50,7 @@ class CreateContactViewController: UIViewController, UITextFieldDelegate {
         txtLastname.leftView = UIImageView(image: UIImage(named: "smiley"))
         txtPhone.leftViewMode = UITextFieldViewMode.Always
         txtPhone.leftView = UIImageView(image: UIImage(named: "phone"))
+        notifyButton.enabled = false
     }
     
     override func didReceiveMemoryWarning() {
@@ -91,12 +92,28 @@ class CreateContactViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    func checkField() {
+        if txtPhone.text!.isEmpty
+        {
+            notifyButton.enabled = false
+            
+        }
+        else
+        {
+            notifyButton.enabled = true
+        }
+    }
+    
     
     // MARK: UITextFieldDelegate functions
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        checkField()
     }
     
 }

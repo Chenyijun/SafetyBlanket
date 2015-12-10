@@ -23,6 +23,7 @@
 		D140C7161C1A1AB600783D87 /* Dexter Britain - Same Old Moments - 10 When It Comes To Start Living.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D140C70A1C1A1AB600783D87 /* Dexter Britain - Same Old Moments - 10 When It Comes To Start Living.mp3 */; };
 		D140C7171C1A1AB600783D87 /* Dexter Britain - Same Old Moments - 11 Flow Free.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D140C70B1C1A1AB600783D87 /* Dexter Britain - Same Old Moments - 11 Flow Free.mp3 */; };
 		D140C7181C1A1AB600783D87 /* Dexter Britain - Same Old Moments - 12 Living In A Dream.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D140C70C1C1A1AB600783D87 /* Dexter Britain - Same Old Moments - 12 Living In A Dream.mp3 */; };
+		D140C71A1C1A276A00783D87 /* AnxietyMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D140C7191C1A276A00783D87 /* AnxietyMessageViewController.swift */; };
 		D15831CE1C137C9300094EAE /* CreateContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15831CD1C137C9300094EAE /* CreateContactViewController.swift */; };
 		D15831D01C137EC500094EAE /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15831CF1C137EC500094EAE /* ContactCell.swift */; };
 		D15831D21C13A38300094EAE /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D15831D11C13A38300094EAE /* ContactCell.xib */; };
@@ -79,6 +80,7 @@
 		D140C70A1C1A1AB600783D87 /* Dexter Britain - Same Old Moments - 10 When It Comes To Start Living.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Dexter Britain - Same Old Moments - 10 When It Comes To Start Living.mp3"; sourceTree = "<group>"; };
 		D140C70B1C1A1AB600783D87 /* Dexter Britain - Same Old Moments - 11 Flow Free.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Dexter Britain - Same Old Moments - 11 Flow Free.mp3"; sourceTree = "<group>"; };
 		D140C70C1C1A1AB600783D87 /* Dexter Britain - Same Old Moments - 12 Living In A Dream.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Dexter Britain - Same Old Moments - 12 Living In A Dream.mp3"; sourceTree = "<group>"; };
+		D140C7191C1A276A00783D87 /* AnxietyMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnxietyMessageViewController.swift; sourceTree = "<group>"; };
 		D15831CD1C137C9300094EAE /* CreateContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateContactViewController.swift; sourceTree = "<group>"; };
 		D15831CF1C137EC500094EAE /* ContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		D15831D11C13A38300094EAE /* ContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				D15831EE1C14BD5F00094EAE /* SignUpViewController.swift */,
 				D15831F01C16033900094EAE /* BreatheViewController.swift */,
 				D15831F21C16080200094EAE /* CircleProgressView.swift */,
+				D140C7191C1A276A00783D87 /* AnxietyMessageViewController.swift */,
 			);
 			path = SafetyBlanket;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				D13ABFF51C11EC7700E45E74 /* SupportViewController.swift in Sources */,
 				D15831F11C16033900094EAE /* BreatheViewController.swift in Sources */,
 				D15831D01C137EC500094EAE /* ContactCell.swift in Sources */,
+				D140C71A1C1A276A00783D87 /* AnxietyMessageViewController.swift in Sources */,
 				D15831F31C16080200094EAE /* CircleProgressView.swift in Sources */,
 				D15831ED1C14BB1400094EAE /* HomeViewController.swift in Sources */,
 				D15831CE1C137C9300094EAE /* CreateContactViewController.swift in Sources */,

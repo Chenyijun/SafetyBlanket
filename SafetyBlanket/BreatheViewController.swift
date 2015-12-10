@@ -10,6 +10,7 @@ import UIKit
 
 class BreatheViewController: UIViewController {
     
+    @IBOutlet weak var instructions: UILabel!
     @IBOutlet weak var circleProgressView: CircleProgressView!
     @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var startStopButton: UIButton!
@@ -64,8 +65,10 @@ class BreatheViewController: UIViewController {
         }
         if counter > 4{
             breathe = "exhale"
+            instructions.text = "Exhale slowly through your mouth, pushing out all the air."
         }else{
             breathe = "inhale"
+            instructions.text = "Inhale slowly through your nose, pushing your belly out."
         }
         progressLabel.text = String(counter)
         breatheInst.text = String(breathe)
