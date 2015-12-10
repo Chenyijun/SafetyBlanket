@@ -12,13 +12,19 @@ class BreatheViewController: UIViewController {
     
     @IBOutlet weak var circleProgressView: CircleProgressView!
     @IBOutlet weak var progressLabel: UILabel!
-    
+    @IBOutlet weak var startStopButton: UIButton!
     @IBOutlet weak var breatheInst: UILabel!
-    @IBAction func startCounter(sender: AnyObject) {
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target:self, selector: Selector("updateCounter"), userInfo: nil, repeats: true)
-    }
-    @IBAction func stopCounter(sender: AnyObject) {
-        timer.invalidate()
+    
+    @IBAction func startStopCounter(sender: AnyObject) {
+        if (running == false){
+            timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target:self, selector: Selector("updateCounter"), userInfo: nil, repeats: true)
+            running = true
+            startStopButton.setImage(UIImage(named: "pause"), forState: .Normal)
+        }else{
+            timer.invalidate()
+            running = false
+            startStopButton.setImage(UIImage(named: "play"), forState: .Normal)
+        }
     }
     
     @IBAction func resetTimer(sender:AnyObject){
@@ -35,6 +41,7 @@ class BreatheViewController: UIViewController {
     var counter = 1
     var miliCounter = 1.0
     var breathe = "inhale"
+    var running = false
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -30,7 +30,6 @@
 		D15831EF1C14BD5F00094EAE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15831EE1C14BD5F00094EAE /* SignUpViewController.swift */; };
 		D15831F11C16033900094EAE /* BreatheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15831F01C16033900094EAE /* BreatheViewController.swift */; };
 		D15831F31C16080200094EAE /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15831F21C16080200094EAE /* CircleProgressView.swift */; };
-		D15831F51C160DE100094EAE /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15831F41C160DE100094EAE /* Counter.swift */; };
 		D1D258351C0CC66C0018B123 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D258341C0CC66C0018B123 /* AppDelegate.swift */; };
 		D1D258371C0CC66C0018B123 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D258361C0CC66C0018B123 /* ViewController.swift */; };
 		D1D2583A1C0CC66C0018B123 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1D258381C0CC66C0018B123 /* Main.storyboard */; };
@@ -75,7 +74,6 @@
 		D15831EE1C14BD5F00094EAE /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D15831F01C16033900094EAE /* BreatheViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreatheViewController.swift; sourceTree = "<group>"; };
 		D15831F21C16080200094EAE /* CircleProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
-		D15831F41C160DE100094EAE /* Counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		D1D2582F1C0CC66C0018B123 /* SafetyBlanket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafetyBlanket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1D258331C0CC66C0018B123 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1D258341C0CC66C0018B123 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -187,7 +185,6 @@
 				D15831EE1C14BD5F00094EAE /* SignUpViewController.swift */,
 				D15831F01C16033900094EAE /* BreatheViewController.swift */,
 				D15831F21C16080200094EAE /* CircleProgressView.swift */,
-				D15831F41C160DE100094EAE /* Counter.swift */,
 			);
 			path = SafetyBlanket;
 			sourceTree = "<group>";
@@ -372,7 +369,6 @@
 			files = (
 				D1D258371C0CC66C0018B123 /* ViewController.swift in Sources */,
 				D13ABFF71C11EFC100E45E74 /* MessageComposer.swift in Sources */,
-				D15831F51C160DE100094EAE /* Counter.swift in Sources */,
 				D15831EF1C14BD5F00094EAE /* SignUpViewController.swift in Sources */,
 				D1D258351C0CC66C0018B123 /* AppDelegate.swift in Sources */,
 				D13ABFF51C11EC7700E45E74 /* SupportViewController.swift in Sources */,

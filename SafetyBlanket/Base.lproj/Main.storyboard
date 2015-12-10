@@ -154,38 +154,30 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaF-1z-sMf">
-                                <rect key="frame" x="377" y="461" width="39" height="30"/>
-                                <state key="normal" title="Reset"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2y-JM-pu8">
+                                <rect key="frame" x="279" y="415" width="43" height="45"/>
+                                <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="startStopCounter:" destination="nMm-fq-I9w" eventType="touchUpInside" id="Ieq-zT-fUd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaF-1z-sMf">
+                                <rect key="frame" x="403" y="421" width="30" height="33"/>
+                                <state key="normal" image="reset"/>
                                 <connections>
                                     <action selector="resetTimer:" destination="nMm-fq-I9w" eventType="touchUpInside" id="Sbx-MY-ZkO"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U6o-dQ-Kaa">
-                                <rect key="frame" x="284" y="461" width="32" height="30"/>
-                                <state key="normal" title="Stop"/>
-                                <connections>
-                                    <action selector="stopCounter:" destination="nMm-fq-I9w" eventType="touchUpInside" id="Uf9-g0-YTt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ro-sy-rb2">
-                                <rect key="frame" x="185" y="459" width="40" height="34"/>
-                                <state key="normal" title="Start"/>
-                                <connections>
-                                    <action selector="startCounter:" destination="nMm-fq-I9w" eventType="touchUpInside" id="50m-bX-ByX"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="QaF-1z-sMf" firstAttribute="top" secondItem="CtP-LT-OFH" secondAttribute="bottom" constant="66" id="AqR-Zc-ddy"/>
-                            <constraint firstItem="5ro-sy-rb2" firstAttribute="leading" secondItem="CtP-LT-OFH" secondAttribute="leading" id="KVr-G9-Mfo"/>
+                            <constraint firstItem="QaF-1z-sMf" firstAttribute="leading" secondItem="Z2y-JM-pu8" secondAttribute="trailing" constant="81" id="J7C-oI-KAG"/>
                             <constraint firstItem="CtP-LT-OFH" firstAttribute="top" secondItem="SdB-ze-bgX" secondAttribute="bottom" constant="87" id="Mfp-kr-4ID"/>
                             <constraint firstItem="QaF-1z-sMf" firstAttribute="trailing" secondItem="CtP-LT-OFH" secondAttribute="trailing" id="Rd4-2M-vQu"/>
-                            <constraint firstItem="U6o-dQ-Kaa" firstAttribute="top" secondItem="CtP-LT-OFH" secondAttribute="bottom" constant="66" id="XOx-VD-Pjb"/>
-                            <constraint firstItem="5ro-sy-rb2" firstAttribute="top" secondItem="CtP-LT-OFH" secondAttribute="bottom" constant="66" id="bDf-f5-PLp"/>
                             <constraint firstItem="CtP-LT-OFH" firstAttribute="top" secondItem="SdB-ze-bgX" secondAttribute="bottom" constant="87" id="eXs-cp-Vsg"/>
-                            <constraint firstItem="U6o-dQ-Kaa" firstAttribute="centerX" secondItem="CtP-LT-OFH" secondAttribute="centerX" id="gnR-hu-iEp"/>
+                            <constraint firstItem="Z2y-JM-pu8" firstAttribute="centerX" secondItem="AW0-8B-ADX" secondAttribute="centerX" id="jgD-eT-hA5"/>
+                            <constraint firstItem="QaF-1z-sMf" firstAttribute="top" secondItem="CtP-LT-OFH" secondAttribute="bottom" constant="26" id="nTb-IO-Ava"/>
+                            <constraint firstItem="Z2y-JM-pu8" firstAttribute="top" secondItem="CtP-LT-OFH" secondAttribute="bottom" constant="20" id="rVb-W4-HUm"/>
                             <constraint firstItem="CtP-LT-OFH" firstAttribute="centerX" secondItem="AW0-8B-ADX" secondAttribute="centerX" id="uBb-xR-sNd"/>
                         </constraints>
                     </view>
@@ -194,6 +186,7 @@
                         <outlet property="breatheInst" destination="url-2V-exq" id="6C1-Ng-kQs"/>
                         <outlet property="circleProgressView" destination="CtP-LT-OFH" id="n2O-52-AoS"/>
                         <outlet property="progressLabel" destination="WxY-Df-PAB" id="Lez-Y1-A0k"/>
+                        <outlet property="startStopButton" destination="Z2y-JM-pu8" id="bfU-fo-eFc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xxy-eH-SN3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -217,7 +210,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="z7A-rX-wUt" secondAttribute="height" multiplier="227:15" id="JDX-kA-2hD"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -230,7 +223,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="TsX-N1-erE" secondAttribute="height" multiplier="227:15" id="jlc-qm-lqe"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -239,7 +232,9 @@
                                 </variation>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dwe-TL-YCw">
-                                <rect key="frame" x="268" y="285" width="55" height="30"/>
+                                <rect key="frame" x="227.5" y="285" width="145" height="25"/>
+                                <color key="backgroundColor" red="0.71372549019999998" green="0.94509803920000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="contentEdgeInsets" minX="45" minY="3" maxX="45" maxY="3"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <action selector="signUpAction:" destination="FH2-x7-ztg" eventType="touchUpInside" id="dQx-jC-W2l"/>
@@ -250,7 +245,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="KKY-eV-uJB" secondAttribute="height" multiplier="227:15" id="hpU-YO-Q4m"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -263,7 +258,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="kin-RW-2dS" secondAttribute="height" multiplier="227:15" id="OjQ-sl-buX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -326,8 +321,8 @@
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAe-is-s1o">
-                                <rect key="frame" x="156" y="333" width="281" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAe-is-s1o">
+                                <rect key="frame" x="228" y="333" width="144" height="30"/>
                                 <color key="backgroundColor" red="0.71372549019999998" green="0.94509803920000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
                                 <inset key="contentEdgeInsets" minX="45" minY="0.0" maxX="45" maxY="0.0"/>
@@ -336,16 +331,16 @@
                                     <segue destination="FH2-x7-ztg" kind="show" id="pnH-kh-vSm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H58-pd-tgW">
-                                <rect key="frame" x="156" y="285" width="281" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H58-pd-tgW">
+                                <rect key="frame" x="228" y="285" width="144" height="30"/>
                                 <color key="backgroundColor" red="0.71372549019999998" green="0.94509803920000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginAction:" destination="ecM-lG-yds" eventType="touchUpInside" id="WVQ-JH-wDS"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Safety Blanket" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqC-Il-npb">
-                                <rect key="frame" x="145" y="72" width="325" height="75"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Safety Blanket" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqC-Il-npb">
+                                <rect key="frame" x="179.5" y="72" width="241" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="325" id="bHQ-tL-7Hg"/>
                                     <constraint firstAttribute="height" constant="75" id="n2c-BM-QhA"/>
@@ -427,6 +422,20 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccv-Xu-kAy">
+                                <rect key="frame" x="191" y="421" width="48" height="43"/>
+                                <state key="normal" image="phone2"/>
+                                <connections>
+                                    <action selector="callNumber" destination="QZ1-Mg-6sF" eventType="touchUpInside" id="Ug5-gR-dGB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCt-hH-7Vf">
+                                <rect key="frame" x="191" y="472" width="48" height="43"/>
+                                <state key="normal" image="phone2"/>
+                                <connections>
+                                    <action selector="callNumber" destination="QZ1-Mg-6sF" eventType="touchUpInside" id="hGe-ia-Dlo"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q0E-Nh-JQ7">
                                 <rect key="frame" x="260" y="421" width="43" height="41"/>
                                 <state key="normal" backgroundImage="message"/>
@@ -434,8 +443,8 @@
                                     <action selector="sendTextMessageButtonTapped:" destination="QZ1-Mg-6sF" eventType="touchUpInside" id="QoV-x9-0K1"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Suicide Hotline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRI-pi-o7W">
-                                <rect key="frame" x="31" y="431" width="115" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crisis Call Center" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRI-pi-o7W">
+                                <rect key="frame" x="31" y="431" width="131" height="24"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -447,31 +456,34 @@
                                     <action selector="showContacts:" destination="QZ1-Mg-6sF" eventType="touchUpInside" id="125-Il-RsI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccv-Xu-kAy">
-                                <rect key="frame" x="191" y="421" width="48" height="43"/>
-                                <state key="normal" image="phone2"/>
-                                <connections>
-                                    <action selector="callNumber" destination="QZ1-Mg-6sF" eventType="touchUpInside" id="Ug5-gR-dGB"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Suicide Hotline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQf-Bo-Vww">
+                                <rect key="frame" x="31" y="488" width="115" height="21"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="gCt-hH-7Vf" firstAttribute="top" secondItem="ccv-Xu-kAy" secondAttribute="bottom" constant="8" id="0D6-t6-mfP"/>
                             <constraint firstItem="5MU-QF-Un5" firstAttribute="leading" secondItem="z11-Hc-Q95" secondAttribute="trailing" constant="13" id="2Fw-bU-d30"/>
                             <constraint firstItem="Q0E-Nh-JQ7" firstAttribute="leading" secondItem="ccv-Xu-kAy" secondAttribute="trailing" constant="29" id="2wG-Fv-dQf"/>
                             <constraint firstItem="rkl-yj-h6V" firstAttribute="leading" secondItem="EP3-Gl-xCG" secondAttribute="leadingMargin" constant="15" id="5Do-Yc-MIh"/>
                             <constraint firstItem="ccv-Xu-kAy" firstAttribute="leading" secondItem="wRI-pi-o7W" secondAttribute="trailing" constant="45" id="6ce-zw-EFG"/>
                             <constraint firstItem="5MU-QF-Un5" firstAttribute="top" secondItem="i3O-X1-SBa" secondAttribute="bottom" constant="14" id="7JH-7N-k8f"/>
                             <constraint firstItem="Pbg-dj-iME" firstAttribute="top" secondItem="i3O-X1-SBa" secondAttribute="bottom" constant="18" id="Tzz-36-Qg9"/>
+                            <constraint firstItem="gCt-hH-7Vf" firstAttribute="leading" secondItem="ccv-Xu-kAy" secondAttribute="leading" id="WOA-7l-PsH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rkl-yj-h6V" secondAttribute="trailing" constant="14" id="f37-oc-85i"/>
                             <constraint firstItem="z11-Hc-Q95" firstAttribute="leading" secondItem="Pbg-dj-iME" secondAttribute="trailing" constant="19" id="fHn-Ac-c0m"/>
                             <constraint firstItem="Q0E-Nh-JQ7" firstAttribute="top" secondItem="21f-Lg-l7o" secondAttribute="bottom" constant="16.5" id="jqD-2J-4bk"/>
                             <constraint firstItem="21f-Lg-l7o" firstAttribute="top" secondItem="rkl-yj-h6V" secondAttribute="bottom" constant="42" id="oNU-uW-olC"/>
                             <constraint firstItem="LBO-BV-8df" firstAttribute="top" secondItem="21f-Lg-l7o" secondAttribute="bottom" constant="189.5" id="ofr-wp-si9"/>
                             <constraint firstItem="rkl-yj-h6V" firstAttribute="top" secondItem="i3O-X1-SBa" secondAttribute="bottom" constant="52" id="pin-Rz-TDS"/>
+                            <constraint firstItem="pQf-Bo-Vww" firstAttribute="top" secondItem="wRI-pi-o7W" secondAttribute="bottom" constant="33" id="q1z-Uo-N91"/>
                             <constraint firstItem="Pbg-dj-iME" firstAttribute="leading" secondItem="EP3-Gl-xCG" secondAttribute="leadingMargin" constant="16" id="tGp-O8-ptA"/>
                             <constraint firstItem="ccv-Xu-kAy" firstAttribute="top" secondItem="21f-Lg-l7o" secondAttribute="bottom" constant="16.5" id="u9e-R7-nLA"/>
                             <constraint firstItem="wRI-pi-o7W" firstAttribute="top" secondItem="21f-Lg-l7o" secondAttribute="bottom" constant="20.5" id="vUn-H3-4xx"/>
+                            <constraint firstItem="pQf-Bo-Vww" firstAttribute="leading" secondItem="EP3-Gl-xCG" secondAttribute="leadingMargin" constant="11" id="vZy-AQ-Jia"/>
                             <constraint firstItem="21f-Lg-l7o" firstAttribute="leading" secondItem="EP3-Gl-xCG" secondAttribute="leadingMargin" constant="11" id="vjU-tv-rLh"/>
                             <constraint firstItem="wRI-pi-o7W" firstAttribute="leading" secondItem="21f-Lg-l7o" secondAttribute="leading" id="y23-T1-Jle"/>
                             <constraint firstItem="z11-Hc-Q95" firstAttribute="top" secondItem="i3O-X1-SBa" secondAttribute="bottom" constant="14" id="ztu-ZL-AER"/>
@@ -533,7 +545,8 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qet-Oi-pso">
-                                <rect key="frame" x="41" y="319" width="430" height="103"/>
+                                <rect key="frame" x="41" y="319" width="430" height="39"/>
+                                <color key="backgroundColor" red="0.71372549019999998" green="0.94509803920000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Notify contact"/>
                                 <connections>
                                     <action selector="notifyContact:" destination="xv9-7B-vn0" eventType="touchUpInside" id="ckd-2U-dw0"/>
@@ -618,6 +631,8 @@
         <image name="BreatheIcon" width="124" height="115"/>
         <image name="message" width="43" height="41"/>
         <image name="phone2" width="28" height="41"/>
+        <image name="play" width="43" height="45"/>
+        <image name="reset" width="30" height="33"/>
         <image name="safetyBlanketMascot" width="213" height="255"/>
         <image name="supportIcon" width="125" height="112"/>
     </resources>

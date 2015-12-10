@@ -38,6 +38,7 @@ class SupportViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewWillAppear(animated: Bool) {
         parseContacts = getParseContacts()
         self.tblContacts.reloadData()
+        
     }
     let messageComposer = MessageComposer()
     
