@@ -142,6 +142,7 @@ class SupportViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         print("Cell for Row")
         let cell = tableView.dequeueReusableCellWithIdentifier("idCellContact") as! ContactCell
+        cell.controller = self
         let currentContact = parseContacts[indexPath.row]
         let contactFirstName = currentContact["firstName"] as! String
         let contactLastName = currentContact["lastName"] as! String
