@@ -73,7 +73,6 @@ class SupportViewController: UIViewController, UITableViewDelegate, UITableViewD
     // MARK: IBAction functions
     
     @IBAction func showContacts(sender: AnyObject) { //opens contact picker
-        print("Show Contacts")
         let contactPickerViewController = CNContactPickerViewController()
         
         contactPickerViewController.predicateForEnablingContact = NSPredicate(format: "givenName != nil")
@@ -93,7 +92,6 @@ class SupportViewController: UIViewController, UITableViewDelegate, UITableViewD
     // MARK: Custom functions
     
     func refetchContact(contact contact: CNContact, atIndexPath indexPath: NSIndexPath) {
-        print("refetchContact")
         AppDelegate.getAppDelegate().requestForAccess { (accessGranted) -> Void in
             if accessGranted {
                 let keys = [CNContactFormatter.descriptorForRequiredKeysForStyle(CNContactFormatterStyle.FullName), CNContactPhoneNumbersKey]
@@ -115,7 +113,6 @@ class SupportViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     func configureTableView() {
-        print("ConfigureTableView")
         tblContacts.delegate = self
         tblContacts.dataSource = self
         tblContacts.registerNib(UINib(nibName: "ContactCell", bundle: nil), forCellReuseIdentifier: "idCellContact")
@@ -127,19 +124,16 @@ class SupportViewController: UIViewController, UITableViewDelegate, UITableViewD
     // MARK: UITableView Delegate and Datasource functions
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        print("numberOfSections")
         return 1
     }
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int { //update number of rows in tableView
-        print("Number of Rows")
         return parseContacts.count
     }
     
     //create cell
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        print("Cell for Row")
         let cell = tableView.dequeueReusableCellWithIdentifier("idCellContact") as! ContactCell
         cell.controller = self
         let currentContact = parseContacts[indexPath.row]
@@ -149,7 +143,6 @@ class SupportViewController: UIViewController, UITableViewDelegate, UITableViewD
         let contactNumber = currentContact["phoneNumber"] as! String
         cell.lblFullname.text = contactName
         cell.phoneNumber = contactNumber
-        print(cell.phoneNumber)
         return cell
     }
     
@@ -181,7 +174,6 @@ class SupportViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func didFetchContacts(contacts: [CNContact]) {
         for contact in contacts {
-            print(contact.phoneNumbers)
             let newContact = PFObject(className: "Contact")
             newContact.setObject(contact.givenName, forKey:"firstName")
             newContact.setObject(contact.familyName, forKey:"lastName")
@@ -191,18 +183,14 @@ class SupportViewController: UIViewController, UITableViewDelegate, UITableViewD
             }
             newContact.setObject(PFUser.currentUser()!, forKey: "userId")
             newContact.saveInBackground()
-            print(newContact)
-            print("end of loop in fetch")
             self.contacts.append(contact)
         }
-        print("end of fetch")
         tblContacts.reloadData()
     }
 
     // MARK: CNContactPickerDelegate function displays contact picker
     
     func contactPicker(picker: CNContactPickerViewController, didSelectContact contact: CNContact) {
-        print("ContactPicker")
         didFetchContacts([contact])
         navigationController?.dismissViewControllerAnimated(true, completion: nil)
     }

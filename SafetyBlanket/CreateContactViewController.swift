@@ -109,4 +109,9 @@ class CreateContactViewController: UIViewController, UITextFieldDelegate {
         checkField()
     }
     
+    //hide phone pad keyboard
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
 }

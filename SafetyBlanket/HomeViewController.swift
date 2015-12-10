@@ -19,12 +19,10 @@ class HomeViewController: UIViewController {
     
     @IBAction func controlMusic(sender: AnyObject){
         if (isPlaying==true){
-            print("isPlaying")
             audioPlayer.pause()
             musicButton.setImage(UIImage(named: "speakerStop2"), forState: .Normal)
             isPlaying = false
         }else{
-            print("isNotPlaying")
             audioPlayer.play()
         musicButton.setImage(UIImage(named: "speakerPlay2"), forState: .Normal)
             isPlaying = true
